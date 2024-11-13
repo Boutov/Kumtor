@@ -17,7 +17,74 @@
   margin: 0;
   box-sizing: border-box;
 }
+.modal-main{
+  display: none;
+}
+.parent{
+ position: relative;
 
+}
+
+.vis{
+  display: block;
+  /* width: 100px;
+  height: 100px; */
+  z-index: 8;
+  position: absolute;
+  top: 200px; 
+  background-color: var(--primary-color-extra-light) ;
+}
+.container {
+  padding: 16px;
+}
+
+/* Full-width input fields */
+input[type=text], input[type=password] {
+  width: 100%;
+  padding: 15px;
+  margin: 5px 0 22px 0;
+  display: inline-block;
+  border: none;
+  background: #f1f1f1;
+}
+
+input[type=text]:focus, input[type=password]:focus {
+  background-color: #ddd;
+  outline: none;
+}
+
+/* Overwrite default styles of hr */
+hr {
+  border: 1px solid #f1f1f1;
+  margin-bottom: 25px;
+}
+
+/* Set a style for the submit/register button */
+.registerbtn {
+  background-color: var(--secondary-color);
+  color: white;
+  padding: 16px 20px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  opacity: 0.9;
+}
+
+.registerbtn:hover {
+  opacity:1;
+}
+
+/* Add a blue text color to links */
+a {
+  color: rgb(111, 173, 234);
+}
+
+/* Set a grey background color and center the text of the "sign in" section */
+.signin {
+  background-color: #f1f1f1;
+  text-align: center;
+}
 .section__container {
   max-width: var(--max-width);
   margin: auto;
@@ -97,9 +164,7 @@ nav {
 }
 
 .link a {
-
-> •○𝓒𝓘𝓓 𝓚𝓐𝓖𝓔𝓝𝓞𝓤○• -:
-position: relative;
+  position: relative;
   padding-bottom: 0.75rem;
   color: var(--white);
 }
@@ -201,7 +266,6 @@ position: relative;
   gap: 2rem;
 }
 
-> •○𝓒𝓘𝓓 𝓚𝓐𝓖𝓔𝓝𝓞𝓤○• -:
 .explore__nav {
   display: flex;
   align-items: center;
@@ -284,7 +348,7 @@ position: relative;
   position: relative;
 }
 
-.classimage .classimg-1 {
+.class__image .class__img-1 {
   position: absolute;
   right: 0;
   top: 0;
@@ -292,7 +356,7 @@ position: relative;
   border-radius: 10px;
 }
 
-.classimage .classimg-2 {
+.class__image .class__img-2 {
   position: absolute;
   left: 0;
   bottom: 0;
@@ -300,12 +364,11 @@ position: relative;
   border-radius: 10px;
 }
 
-> •○𝓒𝓘𝓓 𝓚𝓐𝓖𝓔𝓝𝓞𝓤○• -:
 .class__content {
   padding: 2rem 0;
 }
 
-.classcontent .sectionheader {
+.class__content .section__header {
   text-align: left;
   max-width: 400px;
 }
@@ -385,7 +448,7 @@ position: relative;
   border-color: var(--secondary-color);
 }
 
-.pricecardcontent {
+.price__card__content {
   flex: 1;
   margin-bottom: 2rem;
 }
@@ -402,9 +465,7 @@ position: relative;
   margin-bottom: 2rem;
   font-size: 2rem;
   font-weight: 600;
-
-> •○𝓒𝓘𝓓 𝓚𝓐𝓖𝓔𝓝𝓞𝓤○• -:
-color: var(--white);
+  color: var(--white);
   border-bottom: 2px solid var(--white);
 }
 
@@ -486,7 +547,7 @@ color: var(--white);
   border-radius: 100%;
 }
 
-.reviewmemberdetails h4 {
+.review__member__details h4 {
   margin-bottom: 0;
 }
 
@@ -504,9 +565,7 @@ color: var(--white);
 
 .footer__container {
   position: relative;
-
-> •○𝓒𝓘𝓓 𝓚𝓐𝓖𝓔𝓝𝓞𝓤○• -:
-display: grid;
+  display: grid;
   grid-template-columns: 400px repeat(3, 1fr);
   gap: 2rem;
 }
@@ -606,8 +665,7 @@ display: grid;
     gap: 2rem;
   }
 
-> •○𝓒𝓘𝓓 𝓚𝓐𝓖𝓔𝓝𝓞𝓤○• -:
-.footer__container {
+  .footer__container {
     grid-template-columns: 1fr 200px;
   }
 }
