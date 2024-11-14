@@ -1,190 +1,346 @@
-> •○𝓒𝓘𝓓 𝓚𝓐𝓖𝓔𝓝𝓞𝓤○• -:
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en-US">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link
-      href="https://cdn.jsdelivr.net/npm/remixicon@3.4.0/fonts/remixicon.css"
-      rel="stylesheet"
-    />
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@3.4.0/fonts/remixicon.css" rel="stylesheet" />
     <link rel="stylesheet" href="styles.css" />
-    <title>Rock Fossils | Fossils</title>
+    <link rel='stylesheet' href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css'>
+    <style>
+        /* Добавляем плавную прокрутку */
+        html {
+          scroll-behavior: smooth;
+        }
+      </style>
+    <title>Welcome to BGS - British Geological Survey</title>
   </head>
   <body>
-    <nav>
+    <nav id="parent-block" class="parent">
       <div class="nav__logo">
-        <a href="#"><img src="../assets/logo.png" alt="logo" /></a>
+        <img src="https://www.bgs.ac.uk/wp-content/uploads/2020/03/BGS-logo-large.png" class="logo-initial" alt="British Geological Survey" decoding="async" loading="lazy" style="display: inline;">
       </div>
       <ul class="nav__links">
-        <li class="link"><a href="#">Главное</a></li>
-        <li class="link"><a href="#">Программа</a></li>
-        <li class="link"><a href="#">Услуга</a></li>
-        <li class="link"><a href="#">О нас</a></li>
-        <li class="link"><a href="#">Сообщество</a></li>
+        <li class="link"><a href="#header">Главное</a></li>
+        <li class="link"><a href="#Программа">Программа</a></li>
+        <li class="link"><a href="#Услуга">Услуга</a></li>
+        <li class="link"><a href="#Сообщество">Сообщество</a></li>
+        <li class="link"><a href="#Кантакты">Кантакты</a></li>
       </ul>
-      <button class="btn">Присоединяйтесь сейчас</button>
+      <button id="sign" class="btn">Sign</button>
+      <button id="login" class="btn">Login</button>
+      <div id="modal" class="modal-main">
     </nav>
-
-    <header class="sectioncontainer headercontainer">
+    
+    <header id="header" class="section__container header__container">
       <div class="header__content">
         <span class="bg__blur"></span>
-        <span class="bgblur headerblur"></span>
+        <span class="bg__blur header__blur"></span>
         <h4>ДОБРО ПОЖАЛОВАТЬ</h4>
         <h1><span>ОТКРОЙТЕ</span> ДЛЯ СЕБЯ СОКРОВИЩА СВОЕЙ ЗЕМЛИ</h1>
         <p>
           Откройте скрытые сокровища Земли и отправляйтесь в путешествие, чтобы открыть богатства под вашими ногами. Зарегистрируйтесь на «Изучите минералы гор» сейчас и станьте свидетелем невероятных чудес, которые может предложить наша планета!
         </p>
-        <button class="btn">Начать</button>
+        <button class="btn" onclick="openVideo()">Начать</button>
       </div>
+
+      <script>
+        function openVideo() {
+            window.open("https://www.youtube.com/watch?v=lNCj9z-f9b4=1", "_blank");
+        }
+    </script>
+
       <div class="header__image">
-        <img src="assets/header.png" alt="header" />
+        <img src="header.png" alt="header" />
       </div>
     </header>
 
-    <section class="sectioncontainer explorecontainer">
-      <div class="explore__header">
-        <h2 class="section__header">ИЗУЧИТЕ НАШУ ПРОГРАММУ</h2>
-      </div>
-      <div class="explore__grid">
-        <div class="explore__card">
-          <span><i class="ri-boxing-fill"></i></span>
-          <h4>Минеральная устойчивость</h4>
-          <p>
-            Используйте силу Земли и отправляйтесь в путешествие, чтобы открыть мощные минералы и ресурсы, которые формируют наш мир. Зарегистрируйтесь на «Силу гор» сейчас и ощутите невероятный потенциал даров природы!».
-          </p>
-          <a href="#">Присоединяйтесь сейчас  <i class="ri-arrow-right-line"></i></a>
+    <section id="Программа" class="section__container explore__container">
+        <div class="explore__header">
+          <h2 class="section__header">ИЗУЧИТЕ НАШУ ПРОГРАММУ</h2>
         </div>
-        <div class="explore__card">
-          <span><i class="ri-heart-pulse-fill"></i></span>
-          <h4>Геологическая разведка</h4>
-          <p>
-            Она охватывает различные исследования, которые расширяют знания, управление ресурсами, устойчивость и общую оценку сокровищ Земли. Каждое исследование предлагает уникальные перспективы, позволяя углубить понимание экологических и экономических аспектов использования природных ресурсов.
-          </p>
-          <a href="#">Присоединяйтесь сейчас <i class="ri-arrow-right-line"></i></a>
+        <div class="explore__grid">
+          <div class="explore__card">
+            <span><i class="ri-boxing-fill"></i></span>
+            <h4>Минеральная устойчивость</h4>
+            <p>
+              Используйте силу Земли и отправляйтесь в путешествие, чтобы открыть мощные минералы и ресурсы, которые формируют наш мир. Зарегистрируйтесь на «Силу гор» сейчас и ощутите невероятный потенциал даров природы!».
+            </p>
+            <a href="#">Присоединяйтесь сейчас  <i class="ri-arrow-right-line"></i></a>
+          </div>
+          <div class="explore__card">
+            <span><i class="ri-heart-pulse-fill"></i></span>
+            <h4>Геологическая разведка</h4>
+            <p>
+              Она охватывает различные исследования, которые расширяют знания, управление ресурсами, устойчивость и общую оценку сокровищ Земли. Каждое исследование предлагает уникальные перспективы, позволяя углубить понимание экологических и экономических аспектов использования природных ресурсов.
+            </p>
+            <a href="#">Присоединяйтесь сейчас <i class="ri-arrow-right-line"></i></a>
+          </div>
+          <div class="explore__card">
+            <span><i class="ri-device-recover-line"></i></span>
+            <h4>Восстановление ресурсов</h4>
+            <p>
+              Благодаря сочетанию методов исследования и экспертных знаний мы дадим вам возможность раскрыть богатства Земли. Наши программы помогут вам развить навыки, необходимые для ответственного использования и сохранения этих ресурсов.
+            </p>
+            <a href="#">Присоединяйтесь сейчас  <i class="ri-arrow-right-line"></i></a>
+          </div>
+          <div class="explore__card">
+            <span><i class="ri-shopping-bag-3-line"></i></span>
+            <h4>Зачем она нужна нам</h4>
+            <p>
+              Наша программа, созданная для энтузиастов, предлагает эффективный подход к обнаружению и устойчивому использованию природных ресурсов. Мы стремимся вдохновить участников на ответственное отношение к окружающей среде и глубокое понимание важности сохранения природного наследия.
+            </p>
+            <a href="#">Присоединяйтесь сейчас <i class="ri-arrow-right-line"></i></a>
+          </div>
         </div>
-        <div class="explore__card">
-          <span><i class="ri-run-line"></i></span>
-          <h4>Восстановление ресурсов</h4>
-          <p>
-            Благодаря сочетанию методов исследования и экспертных знаний мы дадим вам возможность раскрыть богатства Земли. Наши программы помогут вам развить навыки, необходимые для ответственного использования и сохранения этих ресурсов.
-          </p>
-          <a href="#">Присоединяйтесь сейчас  <i class="ri-arrow-right-line"></i></a>
-        </div>
-        <div class="explore__card">
-          <span><i class="ri-shopping-basket-fill"></i></span>
-          <h4>Зачем она нужна нам</h4>
-          <p>
-            Наша программа, созданная для энтузиастов, предлагает эффективный подход к обнаружению и устойчивому использованию природных ресурсов. Мы стремимся вдохновить участников на ответственное отношение к окружающей среде и глубокое понимание важности сохранения природного наследия.
-          </p>
-          <a href="#">Присоединяйтесь сейчас <i class="ri-arrow-right-line"></i></a>
-        </div>
-      </div>
-    </section>
+      </section>
 
-    <section class="sectioncontainer classcontainer"
-
-> •○𝓒𝓘𝓓 𝓚𝓐𝓖𝓔𝓝𝓞𝓤○• -:
-<h2 class="section__header">ПОЧЕМУ ПРИСОЕДИНЯЙТЕСЬ К НАМ??</h2>
-      <p class="section__subheader">
-        Наша  разнообразная группа участников создает дружелюбную и поддерживающую атмосферу, где вы сможете завести новых друзей и оставаться мотивированными. Вы будете окружены единомышленниками, которые разделяют вашу страсть к горным ископаемым, что сделает обучение еще более увлекательным и продуктивным.
-      </p>
-      <div class="join__image">
-        <img src="assets/join.jpg" alt="Join" />
-        <div class="join__grid">
-          <div class="join__card">
-            <span><i class="ri-user-star-fill"></i></span>
-            <div class="joincardcontent">
-              <h4>Личный тренер</h4>
-              <p>Разблокируйте свой потенциал с нашими экспертами по горным ископаемым!</p>
+      <section id="Услуга" class="section__container class__container">
+        <div class="class__image">
+          
+          <span class="bg__blur"></span>       
+          <img src="class-1.jpg" alt="class" class="class__img-1" />
+          <img src="class-2.jpg" alt="class" class="class__img-2" />
+        </div>
+        <div class="class__content">
+          <h2 class="section__header">ГОРНЫЕ ИСКОПАЕМЫЕ, КОТОРЫЕ ВЫ ЗДЕСЬ ИЗУЧИТЕ</h2>
+          <p>
+            Под руководством нашей команды опытных и вдохновляющих инструкторов, "Горные Ископаемые, Которые Вы Здесь Узнаете" — это динамичный и интерактивный курс, который сочетает в себе теорию, практические занятия и увлекательные проекты. Каждый урок тчательно продуман, чтобы поддерживать ваш интерес и углублять понимание тематики, от формирования минералов до их применения в промышленности. Приготовьтесь к активному обучению и получению новых знаний, которые помогут вам в вашей карьере и жизни! Если вы хотите узнать ещё то нажимайте на "Присоединяйтесь сейчас"
+          </p>
+          <button class="btn" onclick="window.location.href='https://www.yaklass.ru/p/geografiya/5-klass/litosfera-kamennaia-obolochka-zemli-56809/raznoobrazie-gornykh-porod-61855/re-01631276-9c7b-45f4-9da1-a2af0ec7b325';">
+            Присоединяйтесь сейчас 
+          </button>  
+        </div>
+      </section>
+  
+      <section id="О-нас" class="section__container join__container">
+        <h2 class="section__header">ПОЧЕМУ ПРИСОЕДИНЯЙТЕСЬ К НАМ??</h2>
+        <p class="section__subheader">
+          Наша  разнообразная группа участников создает дружелюбную и поддерживающую атмосферу, где вы сможете завести новых друзей и оставаться мотивированными. Вы будете окружены единомышленниками, которые разделяют вашу страсть к горным ископаемым, что сделает обучение еще более увлекательным и продуктивным.
+        </p>
+        <div class="join__image">
+          <img src="join.jpg" alt="Join" />
+          <div class="join__grid">
+            <div class="join__card">
+              <span><i class="ri-user-star-fill"></i></span>
+              <div class="join__card__content">
+                <h4>Личный тренер</h4>
+                <p>Разблокируйте свой потенциал с нашими экспертами по горным ископаемым!</p>
+              </div>
+            </div>
+            <div class="join__card">
+              <span><i class="ri-book-3-line"></i></span>
+              <div class="join__card__content">
+                <h4>Практика</h4>
+                <p>Повышайте свои знания о горных ископаемых на практических занятиях!</p>
+              </div>
+            </div>
+            <div class="join__card">
+              <span><i class="ri-building-2-line"></i></span>
+              <div class="join__card__content">
+                <h4>Хорошее управление</h4>
+                <p>Поддержка и руководство для вашего успеха в изучении горных ископаемых!</p>
+              </div>
             </div>
           </div>
-          <div class="join__card">
-            <span><i class="ri-vidicon-fill"></i></span>
-            <div class="joincardcontent">
-              <h4>Практика</h4>
-              <p>Повышайте свои знания о горных ископаемых на практических занятиях!</p>
+        </div>
+      </section>
+  
+      <section id="Сообщество"class="section__container price__container">
+        <h2 class="section__header">НАШ ЦЕНОВОЙ ПЛАН</h2>
+        <p class="section__subheader">
+          Наш план цен включает различные уровни, каждый из которых разработан для удовлетворения разных предпочтений и интересов в области горных ископаемых.
+        </p>
+        <div class="price__grid">
+          <div class="price__card">
+            <div class="price__card__content">
+              <h4>Базовый план</h4>
+              <h3>$16</h3>
+              <p>
+                <i class="ri-checkbox-circle-line"></i>
+                Изучение основ минералогии и петрологии.
+              </p>
+              <p>
+                <i class="ri-checkbox-circle-line"></i>
+                Установка конкретных целей для изучения.
+              </p>
+            </div>
+            <button class="btn price__btn">Присоединяйтесь сейчас </button>
+          </div>
+          <div class="price__card">
+            <div class="price__card__content">
+              <h4>Еженедельный план</h4>
+              <h3>$25</h3>
+              <p>
+                <i class="ri-checkbox-circle-line"></i>
+                Онлайн-курсы и книги по минералогии.
+  
+              </p>
+              <p>
+                <i class="ri-checkbox-circle-line"></i>
+                Онлайн-курсы и книги по минералогии.
+  
+              </p>
+              <p>
+                <i class="ri-checkbox-circle-line"></i>
+                Практика в полевых условиях.
+              </p>
+            </div>
+            <button class="btn price__btn">Присоединяйтесь сейчас </button>
+          </div>
+          <div class="price__card">
+            <div class="price__card__content">
+              <h4>Ежемесячный план</h4>
+              <h3>$45</h3>
+              <p>
+                <i class="ri-checkbox-circle-line"></i>
+                Глубокое понимание горных ископаемых.
+              </p>
+              <p>
+                <i class="ri-checkbox-circle-line"></i>
+                Развитие практических навыков.
+              </p>
+              <p>
+                <i class="ri-checkbox-circle-line"></i>
+                Исследование редких минералов.
+              </p>
+              <p>
+                <i class="ri-checkbox-circle-line"></i>
+                Анализ образцов с использованием специального оборудования.
+              </p>
+              <p>
+                <i class="ri-checkbox-circle-line"></i>
+                Проведение экспериментов.
+              </p>
+            </div>
+            <button class="btn price__btn">Присоединяйтесь сейчас </button>
+          </div>
+        </div>
+      </section>
+  
+      <section class="review">
+        <div class="section__container review__container">
+          <span><i class="ri-double-quotes-r"></i></span>
+          <div class="review__content">
+            <h4><i class='bx bxs-user-circle' ></i> Aibek Ibraimakunov</h4>
+            <p>
+              Что действительно отличает эту компанию по добыче горных ископаемых, так это их команда экспертов. Специалисты обладают глубокими знаниями и опытом, а также искренне заинтересованы в достижении высоких результатов. Они тщательно анализируют потребности клиентов и разрабатывают индивидуальные стратегии работы, чтобы обеспечить максимальную эффективность и безопасность на каждом этапе.
+            </p>
+            <div class="review__rating">
+              <span><i class="ri-star-fill"></i></span>
+              <span><i class="ri-star-fill"></i></span>
+              <span><i class="ri-star-fill"></i></span>
+              <span><i class="ri-star-fill"></i></span>
+              <span><i class="ri-star-half-fill"></i></span>
+            </div>
             </div>
           </div>
-          <div class="join__card">
-            <span><i class="ri-building-line"></i></span>
-            <div class="joincardcontent">
-              <h4>Хорошее управление</h4>
-              <p>Поддержка и руководство для вашего успеха в изучении горных ископаемых!</p>
-            </div>
+        </div>
+      </section>
+  
+      <footer id="Кантакты"class="section__container footer__container">
+        <span class="bg__blur"></span>
+        <span class="bg__blur footer__blur"></span>
+        <div class="footer__col">
+          <div class="footer__logo"><img src="logo1.png" alt="logo1" /></div>
+          <p>
+            Сделайте первый шаг к эффективному развитию вашего бизнеса с нашими непревзойденными ценовыми предложениями на добычу горных ископаемых. Давайте работать, достигать целей и побеждать вместе!
+          </p>
+          <div class="footer__socials">
+            <a href="https://facebook.com"><i class="ri-facebook-fill"></i></a>
+            <a href="https://instagram.com"><i class="ri-instagram-line"></i></a>
+            <a href="https://twitter.com"><i class="ri-twitter-fill"></i></a>
           </div>
         </div>
+        <div class="footer__col">
+          <h4>Компании</h4>
+          <a href="https://www.businessinsider.com/">Business</a>
+          <a href="https://www.franchisedirect.com/">Franchise</a>
+          <a href="https://www.partnership.com/">Partnership</a>
+          <a href="https://en.wikipedia.org/">Network</a>
+        </div>
+        <div class="footer__col">
+          <h4>О нас</h4>
+          <a href="https://www.blogger.com/">Blogs</a>
+          <a href="/Security">Security</a>
+          <a href="https://careers">Careers</a>
+        </div>
+        <div class="footer__col">
+          <h4>Кантакты</h4>
+          <a href="/Email: info@mineralsite.kg">Email: info@mineralsite.kg</a>
+          <a href="/phone: +996 (123) 456-7890">phone: +996 (123) 456-7890</a>
+          <a href="https://www.whatsapp.com/">WhatsApp number: +996 (123) 456-7890</a>
+          <a href="https://www.google.com/maps/">Address: Gogol str., 1, Bishkek, Kyrgyzstan</a>
+
+          <select name="" class="js-language-switch ga-language-switch language-switch" id="language-switch">
+            <h3 class="js-language-switch ga-language-switch language-switch">Переводчик</h3>
+            <p>Переводчик</p>
+            <option value="?hl=en">English</option>
+              <option value="?hl=af" >Afrikaans&lrm;</option>
+              <option value="?hl=am" >Amharic - አማርኛ&lrm;</option>
+              <option value="?hl=ar" >Arabic - العربية&lrm;</option>
+              <option value="?hl=bg" >Bulgarian - български&lrm;</option>
+              <option value="?hl=bn" >Bengali - বাংলা&lrm;</option>
+              <option value="?hl=cs" >Czech - Čeština&lrm;</option>
+              <option value="?hl=da" >Danish - Dansk&lrm;</option>
+              <option value="?hl=de" >German - Deutsch&lrm;</option>
+              <option value="?hl=el" >Greek - Ελληνικά&lrm;</option>
+              <option value="?hl=en-GB" >English (United Kingdom)&lrm;</option>
+              <option value="?hl=es-419" >Spanish (Latin America) - Español (Latinoamérica)&lrm;</option>
+              <option value="?hl=es" >Spanish (Spain) - Español (España)&lrm;</option>
+              <option value="?hl=et" >Estonian - eesti&lrm;</option>
+              <option value="?hl=eu" >Basque - euskara&lrm;</option>
+              <option value="?hl=fa" >Persian - فارسی&lrm;</option>
+              <option value="?hl=fi" >Finnish - Suomi&lrm;</option>
+              <option value="?hl=fil" >Filipino&lrm;</option>
+              <option value="?hl=fr-CA" >French (Canada) - Français (Canada)&lrm;</option>
+              <option value="?hl=fr" >French (France) - Français (France)&lrm;</option>
+              <option value="?hl=gl" >Galician - galego&lrm;</option>
+              <option value="?hl=gu" >Gujarati - ગુજરાતી&lrm;</option>
+              <option value="?hl=hi" >Hindi - हिन्दी&lrm;</option>
+              <option value="?hl=hr" >Croatian - Hrvatski&lrm;</option>
+              <option value="?hl=hu" >Hungarian - magyar&lrm;</option>
+              <option value="?hl=id" >Indonesian - Indonesia&lrm;</option>
+              <option value="?hl=is" >Icelandic - íslenska&lrm;</option>
+              <option value="?hl=it" >Italian - Italiano&lrm;</option>
+              <option value="?hl=iw" >Hebrew - עברית&lrm;</option>
+              <option value="?hl=ja" >Japanese - 日本語&lrm;</option>
+              <option value="?hl=kn" >Kannada - ಕನ್ನಡ&lrm;</option>
+              <option value="?hl=ko" >Korean - 한국어&lrm;</option>
+              <option value="?hl=lt" >Lithuanian - lietuvių&lrm;</option>
+              <option value="?hl=lv" >Latvian - latviešu&lrm;</option>
+              <option value="?hl=ml" >Malayalam - മലയാളം&lrm;</option>
+              <option value="?hl=mr" >Marathi - मराठी&lrm;</option>
+              <option value="?hl=ms" >Malay - Bahasa Melayu&lrm;</option>
+              <option value="?hl=nl" >Dutch - Nederlands&lrm;</option>
+              <option value="?hl=no" >Norwegian - norsk&lrm;</option>
+              <option value="?hl=pl" >Polish - polski&lrm;</option>
+              <option value="?hl=pt-BR" >Portuguese (Brazil) - Português (Brasil)&lrm;</option>
+              <option value="?hl=pt-PT" >Portuguese (Portugal) - português (Portugal)&lrm;</option>
+              <option value="?hl=ro" >Romanian - română&lrm;</option>
+              <option value="?hl=ru" selected disabled>Russian - Русский&lrm;</option>
+              <option value="?hl=sk" >Slovak - Slovenčina&lrm;</option>
+              <option value="?hl=sl" >Slovenian - slovenščina&lrm;</option>
+              <option value="?hl=sr" >Serbian - српски&lrm;</option>
+              <option value="?hl=sv" >Swedish - Svenska&lrm;</option>
+              <option value="?hl=sw" >Swahili - Kiswahili&lrm;</option>
+              <option value="?hl=ta" >Tamil - தமிழ்&lrm;</option>
+              <option value="?hl=te" >Telugu - తెలుగు&lrm;</option>
+              <option value="?hl=th" >Thai - ไทย&lrm;</option>
+              <option value="?hl=tr" >Turkish - Türkçe&lrm;</option>
+              <option value="?hl=uk" >Ukrainian - Українська&lrm;</option>
+              <option value="?hl=ur" >Urdu - اردو&lrm;</option>
+              <option value="?hl=vi" >Vietnamese - Tiếng Việt&lrm;</option>
+              <option value="?hl=zh-HK" >Chinese (Hong Kong) - 中文（香港)&lrm;</option>
+              <option value="?hl=zh-TW" >Chinese (Traditional) - 繁體中文&lrm;</option>
+              <option value="?hl=zu" >Zulu - isiZulu&lrm;</option>
+        </select>
+        </div>
+      </footer>
+      <script src="//ajax.googleapis.com/ajax/libs/webfont/1.5.10/webfont.js" nonce="0bAeheNrjghNH1vJGz7HQA"></script>
+    <script src="js/main.min.js?v=1476060746" class="app-js" nonce="0bAeheNrjghNH1vJGz7HQA"></script>
+      <div class="footer__bar">
+        Авторские права © 2024 Web Design Mastery. Все права защищены.
       </div>
-    </section>
-
-    <section class="sectioncontainer pricecontainer">
-      <h2 class="section__header">НАШ ЦЕНОВОЙ ПЛАН</h2>
-      <p class="section__subheader">
-        Наш план цен включает различные уровни, каждый из которых разработан для удовлетворения разных предпочтений и интересов в области горных ископаемых.
-      </p>
-      <div class="price__grid">
-        <div class="price__card">
-          <div class="pricecardcontent">
-            <h4>Базовый план</h4>
-            <h3>$16</h3>
-            <p>
-              <i class="ri-checkbox-circle-line"></i>
-              Изучение основ минералогии и петрологии.
-            </p>
-            <p>
-              <i class="ri-checkbox-circle-line"></i>
-              Установка конкретных целей для изучения.
-            </p>
-          </div>
-          <button class="btn price__btn">Присоединяйтесь сейчас </button>
-        </div>
-        <div class="price__card">
-          <div class="pricecardcontent">
-            <h4>Еженедельный план</h4>
-            <h3>$25</h3>
-            <p>
-              <i class="ri-checkbox-circle-line"></i>
-              Онлайн-курсы и книги по минералогии.
-
-            </p>
-            <p>
-              <i class="ri-checkbox-circle-line"></i>
-              Онлайн-курсы и книги по минералогии.
-
-            </p>
-            <p>
-              <i class="ri-checkbox-circle-line"></i>
-              Практика в полевых условиях.
-            </p>
-          </div>
-          <button class="btn price__btn">Присоединяйтесь сейчас </button>
-        </div>
-        <div class="price__card">
-          <div class="pricecardcontent">
-            <h4>Ежемесячный план</h4>
-            <h3>$45</h3>
-            <p>
-              <i class="ri-checkbox-circle-line"></i>
-              Глубокое понимание горных ископаемых.
-            </p>
-            <p>
-              <i class="ri-checkbox-circle-line"></i>
-              Развитие практических навыков.
-            </p>
-            <p>
-              <i class="ri-checkbox-circle-line"></i>
-              Исследование редких минералов.
-            </p>
-            <p>
-              <i class="ri-checkbox-circle-line"></i>
-              Анализ образцов с использованием специального оборудования.
-            </p>
-            <p>
-              <i class="ri-checkbox-circle-line"></i>
-              Проведение экспериментов.
-            </p>
-          </div>
-          <button class="btn price__btn">Присоединяйтесь сейчас </button>
-        </div>
-      </div>
-    </sec
+      <script src="script.js"></script>
+    </body>
+  </html>
