@@ -1,90 +1,104 @@
-import hashlib
-import os
-def init_file():  # Инициализация файла, если этого не сделать програма вылетит м ошибкой, что файла нет
-    """Создает файл пользователей"""
-    if not os.path.exists('users.txt'):
-        with open('users.txt', 'w'):
-            pass
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+body{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: url('logo.jpg.jpg') no-repeat center center;
+  background-size: cover;
+  background-position: center;
+}
+.wrapper{
+  width: 420px;
+  background: transparent;
+  border: 2px solid rgba(255, 255, 255, .2);
+  backdrop-filter: blur(9px);
+  color: #fff;
+  border-radius: 12px;
+  padding: 30px 40px;
+}
+.wrapper h1{
+  font-size: 36px;
+  text-align: center;
+}
+.wrapper .input-box{
+  position: relative;
+  width: 100%;
+  height: 50px;
+  
+  margin: 30px 0;
+}
+.input-box input{
+  width: 100%;
+  height: 100%;
+  background: transparent;
+  border: none;
+  outline: none;
+  border: 2px solid rgba(255, 255, 255, .2);
+  border-radius: 40px;
+  font-size: 16px;
+  color: #fff;
+  padding: 20px 45px 20px 20px;
+}
+.input-box input::placeholder{
+  color: #fff;
+}
+.input-box i{
+  position: absolute;
+  right: 20px;
+  top: 30%;
+  transform: translate(-50%);
+  font-size: 20px;
 
+}
+.wrapper .remember-forgot{
+  display: flex;
+  justify-content: space-between;
+  font-size: 14.5px;
+  margin: -15px 0 15px;
+}
+.remember-forgot label input{
+  accent-color: #fff;
+  margin-right: 3px;
 
-def add_user(login: str, password: str) -> bool:
-    """Добавляет пользователя в файл"""
-    with open('users.txt', 'r') as f:
-        users = f.read().splitlines()  # Считываем всех пользователей из файла
+}
+.remember-forgot a{
+  color: #fff;
+  text-decoration: none;
 
-    for user in users:
-        args = user.split(':')
-        if login == args[0]:  # Если логин уже есть, парль не проверяем, шанс взлома увеличится(кто-то мб узнает пароль)
-            return False  # Тут можно написать что угодно, будь то HTML статус(409 - conflict), либо просто фразу ошибки
+}
+.remember-forgot a:hover{
+  text-decoration: underline;
+}
+.wrapper .btn{
+  width: 100%;
+  height: 45px;
+  background: #fff;
+  border: none;
+  outline: none;
+  border-radius: 40px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, .1);
+  cursor: pointer;
+  font-size: 16px;
+  color: #333;
+  font-weight: 600;
+}
+.wrapper .register-link{
+  font-size: 14.5px;
+  text-align: center;
+  margin: 20px 0 15px;
 
-    with open('users.txt', 'a') as f:
-        f.write(f'{login}:{password}\n')  # Добавляем нового пользователя
-    return True
-
-
-def get_user(login: str, password: str) -> bool:
-    """Проверяет логин и пароль пользователя"""
-    with open('users.txt', 'r') as f:
-        users = f.read().splitlines()  # Считываем всех пользователей из файла
-
-    for user in users:
-        args = user.split(':')
-        if login == args[0] and password == args[1]:  # Если пользователь с таким логином и паролем существует
-            return True
-    return False
-
-
-def main_loop(login: str):
-    """Главный цикл программы"""
-    print(f'Привет, {login}!')  # Тут основная часть программы
-
-
-init_file()
-
-while True:
-    print('''Добро пожаловать! Выберите пункт меню:
-    1. Вход
-    2. Регистрация
-    3. Выход''')
-
-    user_input = input()
-    if user_input == '1':  # Условия можно заменить на: user_input.lower() == 'вход'
-        print('Введите логин:')
-        login = input()
-
-        print('Введите пароль:')
-        password = input()
-
-        result = get_user(login, hashlib.sha256(password.encode()).hexdigest())
-
-        if result:
-            print('Вы вошли в систему')
-            break  # Выходим из цикла
-        else:
-            print('Неверный логин или пароль')
-
-    elif user_input == '2':
-        print('Введите логин:')
-        login = input()
-
-        print('Введите пароль:')
-        password = input()
-
-        print('Повторите пароль:')
-        password_repeat = input()
-
-        if password != password_repeat:
-            print('Пароли не совпадают!')
-            continue
-
-        result = add_user(login, hashlib.sha256(
-            password.encode()).hexdigest())  # Вызываем функцию добавления пользователя. И хешируем пароль(безопасность)
-
-        if not result:
-            print('Пользователь с таким логином уже существует')
-        else:
-            print('Регистрация прошла успешно!')
-
-    elif user_input == '3':
-        print('Завершение работы')
-        break  # Выходим из цикла
+}
+.register-link p a{
+  color: #fff;
+  text-decoration: none;
+  font-weight: 600;
+}
+.register-link p a:hover{
+  text-decoration: underline;
+}
