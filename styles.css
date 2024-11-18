@@ -17,6 +17,13 @@
   margin: 0;
   box-sizing: border-box;
 }
+.modal-main{
+  display: none;
+}
+.parent{
+ position: relative;
+
+}
 
 .section__container {
   max-width: var(--max-width);
@@ -86,7 +93,7 @@ nav {
 }
 
 .nav__logo {
-  max-width: 150px;
+  max-width: 155px;
 }
 
 .nav__links {
@@ -97,9 +104,7 @@ nav {
 }
 
 .link a {
-
-> •○𝓒𝓘𝓓 𝓚𝓐𝓖𝓔𝓝𝓞𝓤○• -:
-position: relative;
+  position: relative;
   padding-bottom: 0.75rem;
   color: var(--white);
 }
@@ -119,9 +124,9 @@ position: relative;
   width: 50%;
 }
 
-.header__container {
+.header__container { 
   position: relative;
-  padding-top: 2rem;
+  padding-top: 5rem;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   align-items: center;
@@ -142,23 +147,27 @@ position: relative;
 }
 
 .header__blur {
-  bottom: 5rem;
+  bottom: 3rem;
   right: 0;
 }
 
-.header__content h4 {
+.header__content > div > h4 {
   margin-bottom: 1rem;
   font-size: 1rem;
   font-weight: 600;
   color: var(--secondary-color);
+  position: relative;
+  top: -100px;
 }
 
-.header__content h1 {
+.header__content > div > h1  {
   margin-bottom: 1rem;
-  font-size: 5rem;
+  font-size: 6rem;
   font-weight: 700;
   line-height: 6rem;
   color: var(--white);
+  position: relative;
+  top: -100px;
 }
 
 .header__content h1 span {
@@ -178,20 +187,21 @@ position: relative;
 .header__image::before {
   content: "o";
   position: absolute;
-  top: 0;
+  top: -1000px;
   left: 50%;
   transform: translateX(-50%);
   font-size: 40rem;
   font-weight: 400;
-  line-height: 20rem;
+  line-height: 60rem;
   color: var(--secondary-color);
   opacity: 0.1;
   z-index: -1;
 }
 
 .header__image img {
-  max-width: 350px;
+  max-width: 340px;
   margin: auto;
+  transform: translateY(-180px); 
 }
 
 .explore__header {
@@ -201,7 +211,6 @@ position: relative;
   gap: 2rem;
 }
 
-> •○𝓒𝓘𝓓 𝓚𝓐𝓖𝓔𝓝𝓞𝓤○• -:
 .explore__nav {
   display: flex;
   align-items: center;
@@ -284,7 +293,7 @@ position: relative;
   position: relative;
 }
 
-.classimage .classimg-1 {
+.class__image .class__img-1 {
   position: absolute;
   right: 0;
   top: 0;
@@ -292,7 +301,7 @@ position: relative;
   border-radius: 10px;
 }
 
-.classimage .classimg-2 {
+.class__image .class__img-2 {
   position: absolute;
   left: 0;
   bottom: 0;
@@ -300,12 +309,11 @@ position: relative;
   border-radius: 10px;
 }
 
-> •○𝓒𝓘𝓓 𝓚𝓐𝓖𝓔𝓝𝓞𝓤○• -:
 .class__content {
   padding: 2rem 0;
 }
 
-.classcontent .sectionheader {
+.class__content .section__header {
   text-align: left;
   max-width: 400px;
 }
@@ -385,7 +393,7 @@ position: relative;
   border-color: var(--secondary-color);
 }
 
-.pricecardcontent {
+.price__card__content {
   flex: 1;
   margin-bottom: 2rem;
 }
@@ -402,9 +410,7 @@ position: relative;
   margin-bottom: 2rem;
   font-size: 2rem;
   font-weight: 600;
-
-> •○𝓒𝓘𝓓 𝓚𝓐𝓖𝓔𝓝𝓞𝓤○• -:
-color: var(--white);
+  color: var(--white);
   border-bottom: 2px solid var(--white);
 }
 
@@ -486,7 +492,7 @@ color: var(--white);
   border-radius: 100%;
 }
 
-.reviewmemberdetails h4 {
+.review__member__details h4 {
   margin-bottom: 0;
 }
 
@@ -504,9 +510,7 @@ color: var(--white);
 
 .footer__container {
   position: relative;
-
-> •○𝓒𝓘𝓓 𝓚𝓐𝓖𝓔𝓝𝓞𝓤○• -:
-display: grid;
+  display: grid;
   grid-template-columns: 400px repeat(3, 1fr);
   gap: 2rem;
 }
@@ -517,7 +521,7 @@ display: grid;
 }
 
 .footer__logo {
-  max-width: 150px;
+  max-width: 100px;
   margin-bottom: 2rem;
 }
 
@@ -606,8 +610,7 @@ display: grid;
     gap: 2rem;
   }
 
-> •○𝓒𝓘𝓓 𝓚𝓐𝓖𝓔𝓝𝓞𝓤○• -:
-.footer__container {
+  .footer__container {
     grid-template-columns: 1fr 200px;
   }
 }
